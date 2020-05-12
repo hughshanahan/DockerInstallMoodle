@@ -23,6 +23,14 @@ This is a brief description of how to install a basic version of moodle locally.
   `http://localhost:80`
 
   You can then log yourself in with username `user` and password `bitnami` (all of this can be configured if you do a manual install with docker as outlined on the bitnami site.)
+  
+  
+#Persistent storage 
+The above section means that everytime you bring the service down you will lose what you have done. There is a section on persistent storage in the above. As far as I can see you will also need to update the yaml file to include a volume in the moddle service as well as mariadb.
+
+#To Do
+Infuriatingly there is only a maxiumum 40 Mb limits on uploads to this service. Moodle doesn't give a single way to configure this as outlined [here](https://docs.moodle.org/38/en/File_upload_size#Upload_file_size_restrictions). None of the methods listed there work for the docker configuration.
+
 
   
 
